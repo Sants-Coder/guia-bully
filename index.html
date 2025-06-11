@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/favicon.png" type="image/png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>Bully</title>
+
+</head>
+
+<body>
+    <section class="tela-inicial">
+        <header class="cabecalho">
+            <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu">
+                <img src="img/hamburguer.png" alt="Menu" />
+            </button>
+            <img src="img/favicon.png" alt="logo do jogo" class="brazao">
+            <nav class="navegacao">
+                <ul class="lista" id="inicio">
+                    <li><a href="#introducao">Inicio</a></li>
+                    <li><a href="#missoes">Missões</a></li>
+                    <li><a href="#personagens">Personagens</a></li>
+                    <li><a href="#curiosidades">Curiosidades</a></li>
+                    <li><a href="#zerarcemporcento">Zerar 100%</a></li>
+                    <li><a href="#galeria">Galeria</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                </ul>
+                <div class="social">
+                    <a href="https://www.instagram.com/rockstargames/" target="_blank" rel="noopener noreferrer">
+                        <img src="img/instagram-rockstar.png" alt="Instagram da Rockstar Games" />
+                    </a>
+                    <a href="https://www.youtube.com/@RockstarGames" target="_blank" rel="noopener noreferrer">
+                        <img src="img/youtube-rockstar.png" alt="Youtube da Rockstar Games" />
+                    </a>
+                    <a href="https://x.com/RockstarGames" target="_blank" rel="noopener noreferrer">
+                        <img src="img/twitter-rockstar.png" alt="X da Rockstar Games" />
+                    </a>
+                </div>
+            </nav>
+        </header>
+
+        <main class="introducao" id="introducao">
+            <div class="intro">
+                <img src="img/bully-logo.png" alt="logo do jogo" class="logo">
+                <p>Bully” não é só um jogo — é uma volta ao caos da adolescência, onde cada corredor da Bullworth
+                    Academy
+                    guarda uma história, uma briga ou uma lição mal aprendida.
+
+                    Este site é uma homenagem criativa a tudo que fez (e ainda faz) Bully ser inesquecível: personagens
+                    icônicos, missões memoráveis, e aquele clima rebelde que a Rockstar sabe fazer como ninguém.
+                </p>
+                <div class="grupo-botoes">
+                    <a href="https://www.rockstargames.com/br/bully" target="_blank" rel="noopener noreferrer"
+                        class="botoes">Baixar</a>
+                    <a href="https://www.youtube.com/watch?v=OImxuxMcdjw" target="_blank" rel="noopener noreferrer"
+                        class="botoes">Trailer</a>
+                </div>
+            </div>
+
+            <div class="slide-jogo">
+                <img src="img/bully-wallpapers1.png" alt="Gameplay 1" class="img-slide ativa">
+                <img src="img/bully-wallpapers2.png" alt="Gameplay 2" class="img-slide">
+                <img src="img/bully-wallpapers3.jpg" alt="Gameplay 3" class="img-slide">
+                <img src="img/bully-wallpapers4.png" alt="Gameplay 4" class="img-slide">
+                <img src="img/bully-wallpapers5.jpg" alt="Gameplay 5" class="img-slide">
+                <img src="img/bully-wallpapers6.webp" alt="Gameplay 5" class="img-slide">
+                <img src="img/bully-wallpapers7.jpg" alt="Gameplay 5" class="img-slide">
+                <div class="barra-progresso" id="barra"></div>
+            </div>
+
+
+
+        </main>
+    </section>
+
+    <section class="missoes" id="missoes">
+        <h3 class="titulo">Missões em Destaque</h3>
+        <div class="missoes-grid">
+
+            <div class="missao-card">
+                <img src="img/missoes-bully/hallowen-bully.webp" alt="Missão Halloween">
+                <div class="missao-info">
+                    <h4>Halloween</h4>
+                    <p>Uma noite onde tudo pode acontecer em Bullworth... até mesmo vingança de fantasmas!</p>
+                    <button onclick="abrirModalMissao('halloween')">Ver missão</button>
+                </div>
+            </div>
+
+            <div class="missao-card">
+                <img src="img/missoes-bully/savegary-bully.webp" alt="Missão Save Gary">
+                <div class="missao-info">
+                    <h4>Save Gary</h4>
+                    <p>A missão onde tudo muda. Manipulação, traição e o maior vilão do jogo.</p>
+                    <button onclick="abrirModalMissao('save-gary')">Ver missão</button>
+                </div>
+            </div>
+
+            <div class="missao-card">
+                <img src="img/missoes-bully/thebiggame-bully.webp" alt="Missão The Big Game">
+                <div class="missao-info">
+                    <h4>The Big Game</h4>
+                    <p>Jimmy arma um plano insano durante o jogo de futebol mais esperado do ano.</p>
+                    <button onclick="abrirModalMissao('the-big-game')">Ver missão</button>
+                </div>
+            </div>
+
+            <div id="modalMissao" class="modal-missao">
+                <div class="modal-conteudo">
+                    <span class="fechar" onclick="fecharModalMissao()">&times;</span>
+                    <img id="modalImagem" src="" alt="">
+                    <h3 id="modalTitulo"></h3>
+                    <p id="modalDescricao"></p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <h3 class="titulo">Personagens</h3>
+    <section class="personagens" id="personagens">
+
+        <div class="personagens-galeria">
+
+            <div class="personagem-card">
+                <a href="personagens.html">
+                    <img src="img/personagens-bully/jimmy.jpeg" alt="Jimmy">
+                </a>
+                <div class="personagens-info">
+                    <h4>Jimmy Hopkins</h4>
+                    <p>Protagonista do jogo</p>
+                </div>
+            </div>
+
+            <div class="personagem-card">
+                <a href="personagens.html">
+                    <img src="img/personagens-bully/gary.jpeg" alt="Gary">
+                </a>
+                <div class="personagens-info">
+                    <h4>Gary Smith</h4>
+                    <p>Antagonista do jogo</p>
+                </div>
+            </div>
+
+            <div class="personagem-card">
+                <a href="personagens.html">
+                    <img src="img/personagens-bully/zoe.jpeg" alt="Zoe">
+                </a>
+                <div class="personagens-info">
+                    <h4>Zoe Taylor</h4>
+                    <p>Aliada importante na reta final</p>
+                </div>
+            </div>
+
+            <p class="personagens-info">Clique nas imagens para ver mais personagens do jogo.</p>
+
+        </div>
+
+    </section>
+
+
+
+    <section id="curiosidades" class="curiosidades">
+        <h3 class="titulo">Curiosidades</h3>
+
+        <div class="curiosidades-slider">
+            <button class="btn-slide left" onclick="mudarCuriosidade(-1)">&#10094;</button>
+
+            <div class="curiosidade-card ativa">
+                <img src="img/bullworth-academy.webp" alt="Bullworth">
+                <p>A escola <strong>Bullworth</strong> foi cuidadosamente projetada com inspiração em antigos
+                    <strong>internatos britânicos</strong>, refletindo sua arquitetura imponente, clima rígido e regras
+                    severas. A atmosfera sombria e disciplinadora do colégio reforça a sensação de isolamento e pressão
+                    que muitos alunos sentem — tornando Bullworth quase um personagem à parte dentro da experiência do
+                    jogo.
+                </p>
+            </div>
+
+            <div class="curiosidade-card">
+                <img src="img/hospicio-curiosidades.webp" alt="Shawn Lee">
+                <p><strong>Happy Volts Asylum</strong> é mais do que um hospício — é o lugar onde a sanidade vai para
+                    morrer. Dizem que à noite se ouvem gritos entre os corredores vazios, e que alguns estudantes
+                    levados pra lá... nunca voltaram. O passado sombrio do asilo está ligado à própria escola Bullworth,
+                    e rumores indicam que até Gary passou por lá antes de enlouquecer de vez.</p>
+            </div>
+
+            <div class="curiosidade-card">
+                <img src="img/interação-personagens-do-mesmo-genero.jpg" alt="Interação com o mesmo sexo">
+                <p>No Bully, o protagonista Jimmy Hopkins pode beijar tanto personagens femininas quanto masculinas.
+                    Isso não é apenas uma piada ou bug: foi intencionalmente inserido como uma mecânica social do jogo.
+
+                    Em cada grupo (atletas, nerds, greasers, valentões, etc.), existe pelo menos um NPC masculino com
+                    quem o Jimmy pode interagir romanticamente.</p>
+            </div>
+
+            <div class="curiosidade-card">
+                <img src="img/hallowen-curiosidades.jpg" alt="Halloween">
+                <p>Durante o evento de <strong>Halloween</strong> em Bullworth, o comportamento dos
+                    <strong>NPCs</strong> muda completamente, criando uma atmosfera única e sombria. Os corredores da
+                    escola ficam cobertos por decorações assustadoras, alunos aparecem com fantasias bizarras e as
+                    pegadinhas se tornam ainda mais constantes e cruéis. Professores parecem mais distraídos, e eventos
+                    especiais como missões temáticas tornam essa noite inesquecível. É como se Bullworth mergulhasse num
+                    breve pesadelo — e Jimmy fosse o único realmente acordado.
+                </p>
+            </div>
+
+            <div class="curiosidade-card">
+                <img src="img/curiosidades-bully.jpeg" alt="Cão come cão">
+                <p>Em alguns países, como o Reino Unido, o jogo não foi lançado com o nome Bully por causa de polêmicas
+                    com o tema de bullying. Lá, ele foi chamado de "Canis Canem Edit", que significa “cão come cão” em
+                    latim — uma referência ao brasão da escola. Isso deixou muitos jogadores confusos achando que eram
+                    dois jogos diferentes!</p>
+            </div>
+
+            <div class="curiosidade-card">
+                <img src="img/curiosidades-jimmy-beta.webp" alt="Jimmy Beta">
+                <p>Essa é a versão beta do protagonista do jogo <strong>Jimmy Hopkins</strong></p>
+            </div>
+
+            <button class="btn-slide right" onclick="mudarCuriosidade(1)">&#10095;</button>
+        </div>
+    </section>
+
+    <section class="mapa-bully">
+        <h2 class="titulo">Mapa Completo de Bullworth</h2>
+        <div class="container-mapa">
+            <img src="img/mapa-bullworth.png" alt="Mapa do jogo Bully" class="imagem-mapa">
+        </div>
+    </section>
+
+
+    <section class="zerarcemporcento" id="zerarcemporcento">
+        <h3 class="titulo">Como chegar aos 100%</h3>
+
+        <div class="container-zerarcemporcento">
+            <h3 class="titulos-cemporcento">Coletáveis</h3>
+
+            <div class="cards-wrapper">
+
+                <div class="container-card">
+                    <img src="img/coletaveis/elasticos.png" alt="Elásticos">
+                    <div class="container-info">
+                        <h4>Elásticos</h4>
+                        <p>Coletar todos os 75 elásticos.</p>
+                    </div>
+                </div>
+
+                <div class="container-card">
+                    <img src="img/coletaveis/g&g-cards.png" alt="Cartas G&G">
+                    <div class="container-info">
+                        <h4>Cartas G&G</h4>
+                        <p>Coletar todas as 40 cartas G&G.</p>
+                    </div>
+                </div>
+
+                <div class="container-card">
+                    <img src="img/coletaveis/gnomos.png" alt="Gnomos">
+                    <div class="container-info">
+                        <h4>Gnomos</h4>
+                        <p>Destruir todos os 25 gnomos de jardim.</p>
+                    </div>
+                </div>
+
+                <div class="container-card">
+                    <img src="img/coletaveis/radios.png" alt="Transistores">
+                    <div class="container-info">
+                        <h4>Transistores</h4>
+                        <p>Coletar todos os 6 transistores e aprender todos os movimentos de luta com o morador de rua.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="container-card">
+                    <img src="img/coletaveis/aboboras.png" alt="Abóboras">
+                    <div class="container-info">
+                        <h4>Abóboras</h4>
+                        <p>Destruir todas as 27 abóboras de Halloween.</p>
+                    </div>
+                </div>
+
+                <div class="container-card">
+                    <img src="img/coletaveis/catacumbas.png" alt="Lápides">
+                    <div class="container-info">
+                        <h4>Lápides</h4>
+                        <p>Destruir todas as 19 lápides de Halloween.</p>
+                    </div>
+                </div>
+
+                <div class="container-card">
+                    <img src="img/armarios.jpeg" alt="Armários">
+                    <div class="container-info">
+                        <h4>Lootar Armários</h4>
+                        <p>Lootar os armários para obter as Máscaras de Lobisomen e Bandido, durante ou após o
+                            Halloween.</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <section class="missoes">
+                <h3 class="titulos-cemporcento">Concluir Missões</h3>
+                <div class="cards-wrapper">
+                    <div class="container-card">
+                        <img src="img/missoes-map.png" alt="Mapa com missões do Bully">
+                        <div class="container-info">
+                            <h4>Missões</h4>
+                            <p>Concluir todas as 52 missões da história principal e as missões secundárias (16 no
+                                original,
+                                24 nas edições Scholarship/Anniversary).</p>
+                        </div>
+                    </div>
+
+                    <div class="container-card">
+                        <img src="img/errands-map.png" alt="Mapa com Errands do Bully">
+                        <div class="container-info">
+                            <h4>Errands</h4>
+                            <p>Completar todos os errands (tarefas menores com NPCs, como entregar jornais e recados).
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="concluir-aulas">
+                <h3 class="titulos-cemporcento">Concluir Aulas</h3>
+
+                <div class="cards-wrapper">
+
+                    <div class="container-card">
+                        <img src="img/aulas1.jpg" alt="Aula de Química">
+                        <div class="container-info">
+                            <h4>Aula de Química</h4>
+                        </div>
+                    </div>
+
+                    <div class="container-card">
+                        <img src="img/aulas2.avif" alt="Aula de Inglês">
+                        <div class="container-info">
+                            <h4>Aula de Inglês</h4>
+                        </div>
+                    </div>
+
+                    <div class="container-card">
+                        <img src="img/aulas3.jpg" alt="Aula de Artes">
+                        <div class="container-info">
+                            <h4>Aula de Artes</h4>
+                        </div>
+                    </div>
+
+                    <div class="container-card">
+                        <img src="img/aulas4.webp" alt="Aula de GYM">
+                        <div class="container-info">
+                            <h4>Aula de GYM</h4>
+                        </div>
+                    </div>
+
+                    <div class="container-card">
+                        <img src="img/aulas5.webp" alt="Aula de Oficina">
+                        <div class="container-info">
+                            <h4>Aula de Oficina</h4>
+                        </div>
+
+                    </div>
+
+                    <div class="container-card">
+                        <img src="img/aulas6.webp" alt="Aula de Fotografia">
+                        <div class="container-info">
+                            <h4>Aula de Fotografia</h4>
+                        </div>
+                    </div>
+
+                    <div class="container-card">
+                        <img src="img/aulas7.jpg" alt="Aula de Biologia">
+                        <div class="container-info">
+                            <h4>Aula de Biologia</h4>
+                        </div>
+                    </div>
+
+                    <div class="container-card">
+                        <img src="img/aulas8.jpg" alt="Aula de Música">
+                        <div class="container-info">
+                            <h4>Aula de Música</h4>
+                        </div>
+                    </div>
+
+                    <div class="container-card">
+                        <img src="img/aulas9.jpg" alt="Aula de Matemática">
+                        <div class="container-info">
+                            <h4>Aula de Matemática</h4>
+                        </div>
+                    </div>
+
+                    <div class="container-card">
+                        <img src="img/aulas10.jpg" alt="Aula de Geografia">
+                        <div class="container-info">
+                            <h4>Aula de Geografia</h4>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <section class="corridas">
+                <h3 class="titulos-cemporcento">Corridas e Mini-jogos</h3>
+
+                <div class="cards-wrapper">
+
+                    <div class="container-card">
+                        <img src="img/bike-race.jpg" alt="Jimmy na BMX">
+                        <div class="container-info">
+                            <h4>Corridas de Bicicleta</h4>
+                            <p>Vencer as 14 corridas de bicicleta (distribuídas pelas cidades ).</p>
+                        </div>
+                    </div>
+
+                    <div class="container-card">
+                        <img src="img/kart-race.jpg" alt="Jimmy no Kart">
+                        <div class="container-info">
+                            <h4>Corridas de Kart</h4>
+                            <p>Vencer as 8 corridas de Kart ( Localizadas no parque de diversão (5) e nas cidades (3)
+                                após
+                                completar as primeiras 5 corrida no parque ).</p>
+                        </div>
+                    </div>
+
+                    <div class="container-card">
+                        <img src="img/brinquedos1.png" alt="Brinquedos do Carnaval">
+                        <div class="container-info">
+                            <h4>Brinquedos</h4>
+                            <p>Participar e ganhar pelo menos 1 vez todos os brinquedos do Parque de diversões (Carnaval
+                                ).
+                                Rides (Big Canyon Railway, Big Squid, Ferris Wheel) & Games (Strike Out, High Striker,
+                                Splish Splash, Shooting Range) — ganhar pelo menos uma vez cada um. </p>
+                        </div>
+                    </div>
+
+                    <div class="container-card">
+                        <img src="img/cortar-grama.jpg" alt="Jimmy cortando grama">
+                        <div class="container-info">
+                            <h4>Cortar grama</h4>
+                            <p>Completar todos os níveis de cortar grama e punições de cortar grama ( ou limpar neve, se
+                                você estiver na época de inverno no jogo ), (3 no parque, 3 em casas e 9 na escola).</p>
+                        </div>
+                    </div>
+
+                    <div class="container-card">
+                        <img src="img/entrega-de-jornais.jpg" alt="Jimmy entregando jornais">
+                        <div class="container-info">
+                            <h4>Entregar Jornais</h4>
+                            <p>Fazer pelo menos 2 níveis de entrega de jornais (Paper Route).</p>
+                        </div>
+                    </div>
+
+                    <div class="container-card">
+                        <img src="img/boxing.jpg" alt="Jimmy com traje de lutador">
+                        <div class="container-info">
+                            <h4>Boxing</h4>
+                            <p>Ganhar todas as 5 lutas de boxe (Glass Jaw).</p>
+                        </div>
+                    </div>
+
+                    <div class="container-card">
+                        <img src="img/jogos-arcade.webp" alt="Jogos de Fliperama">
+                        <div class="container-info">
+                            <h4>Jogos de Fliperama</h4>
+                            <p>Obter pontos máximos nos 3 jogos de arcade (ConSumo, Nut Shots e Monkey Fling).</p>
+                        </div>
+                    </div>
+
+                    <div class="container-card">
+                        <img src="img/penalty-shots.jpg" alt="Penalty Shots">
+                        <div class="container-info">
+                            <h4>Penalty Shots e Keep-Ups</h4>
+                            <p>Vencer Penalty Shots e Keep-Ups (mini-jogos da escola) pelo menos uma vez.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <section class="desafios">
+                <h3 class="titulos-cemporcento">Extras e Desafios</h3>
+
+                <div class="cards-wrapper">
+
+                    <div class="container-card">
+                        <img src="img/soda.jpg" alt="maquina de refrigerantes">
+                        <div class="container-info">
+                            <h4>Soda</h4>
+                            <p>Beber 500 refrigerantes → libera o Soda Hat.</p>
+                        </div>
+                    </div>
+
+                    <div class="container-card">
+                        <img src="img/fire-alarms.jpg" alt="alarme de incêndio">
+                        <div class="container-info">
+                            <h4>Puxar o alarme</h4>
+                            <p>Puxar o alarme de incêndio 20 vezes → libera o Capacete de Bombeiro.</p>
+                        </div>
+                    </div>
+
+                    <div class="container-card">
+                        <img src="img/run.jpg" alt="mascote correndo">
+                        <div class="container-info">
+                            <h4>Corre!!</h4>
+                            <p>Percorrer 100km a pé → libera o Running Shorts.</p>
+                        </div>
+                    </div>
+
+                    <div class="container-card">
+                        <img src="img/bike.webp" alt="Jimmy andando de bike">
+                        <div class="container-info">
+                            <h4>Andar de Bicicleta</h4>
+                            <p>Percorrer 100km de bicicleta → libera o Bike Shorts. </p>
+                        </div>
+                    </div>
+
+                    <div class="container-card">
+                        <img src="img/aula-falhada.png" alt="Aula falhada">
+                        <div class="container-info">
+                            <h4>Dunce Cap</h4>
+                            <p>Falhar 5 aulas (intencionalmente) → libera o Chapéu de Burro (Dunce Cap).</p>
+                        </div>
+                    </div>
+
+                    <div class="container-card">
+                        <img src="img/estilingue.jpg" alt="Jimmy com o estilingue">
+                        <div class="container-info">
+                            <h4>Acertar projéteis</h4>
+                            <p>Conseguir 1.000 projéteis acertados → libera o Green Ninja Outfit.</p>
+                        </div>
+                    </div>
+
+                    <div class="container-card">
+                        <img src="img/pirate.jpg" alt="pirata">
+                        <div class="container-info">
+                            <h4>Pirate Hat</h4>
+                            <p>Derrotar o pirata escondido no sul da ilha → libera o Pirate Hat.</p>
+                        </div>
+                    </div>
+
+                    <div class="container-card">
+                        <img src="img/outfits.jpg" alt="Outfits">
+                        <div class="container-info">
+                            <h4>Comprar Todas as Roupas</h4>
+                            <p>Lotar (entrar em...) todos os shopping de roupas (School Store, Worn In, Aquaberry, The
+                                Final
+                                Cut).</p>
+                        </div>
+                    </div>
+
+                    <div class="container-card">
+                        <img src="img/tickets.png" alt="Troca de tickets pela lambreta">
+                        <div class="container-info">
+                            <h4>Trocar tickets</h4>
+                            <p>Comprar todos os itens do Prize Tent (Loja do Parque de diversões) no Carnaval. </p>
+                        </div>
+                    </div>
+
+                    <div class="container-card">
+                        <img src="img/anuario.jpg" alt="Página de anuário dos alunos">
+                        <div class="container-info">
+                            <h4>Fotos dos Alunos</h4>
+                            <p>Tirar todas as fotos para o anuário escolar (Yearbook) → desbloqueia o Black Ninja
+                                Outfit.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="container-card">
+                        <img src="img/pichar.jpg" alt="Jimmy pichando">
+                        <div class="container-info">
+                            <h4>Pichar</h4>
+                            <p>Pichar os muros com mensagens tirando sarro de cada grupinho rival da escola (Nerds,
+                                Valentões, Esportistas, Riquinhos e Marginais).</p>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+
+
+
+        </div>
+    </section>
+
+
+    <section class="galeria" id="galeria">
+        <div class="galeria-header">
+            <h3 class="titulo">Galeria</h3>
+            <p class="autor">Artista: Anthony Macbain</p>
+        </div>
+
+        <div class="galeria-carrossel">
+            <img src="img/galeria-bully/bully-art1.jpg" alt="Imagem 1" class="img-galeria" />
+            <img src="img/galeria-bully/bully-art2.png" alt="Imagem 2" class="img-galeria" />
+            <img src="img/galeria-bully/bully-art3.png" alt="Imagem 3" class="img-galeria" />
+            <img src="img/galeria-bully/bully-art4.png" alt="Imagem 4" class="img-galeria" />
+            <img src="img/galeria-bully/bully-art5.png" alt="Imagem 5" class="img-galeria" />
+            <img src="img/galeria-bully/bully-art6.png" alt="Imagem 6" class="img-galeria" />
+            <img src="img/galeria-bully/bully-art7.png" alt="Imagem 7" class="img-galeria" />
+            <img src="img/galeria-bully/bully-art8.png" alt="Imagem 8" class="img-galeria" />
+            <img src="img/galeria-bully/bully-art9.jpg" alt="Imagem 8" class="img-galeria" />
+            <img src="img/galeria-bully/bully-art10.jpeg" alt="Imagem 8" class="img-galeria" />
+            <img src="img/galeria-bully/bully-art11.jpeg" alt="Imagem 8" class="img-galeria" />
+            <img src="img/galeria-bully/bully-art12.jpeg" alt="Imagem 8" class="img-galeria" />
+            <img src="img/galeria-bully/bully-art13.png" alt="Imagem 8" class="img-galeria" />
+        </div>
+
+        <div class="lightbox" id="lightbox">
+            <img src="" alt="Imagem ampliada" id="lightbox-img" />
+        </div>
+    </section>
+
+
+
+    <section class="Sobre" id="sobre">
+        <h3 class="titulo">Sobre</h3>
+        <p class="sobre-bully">Lançado originalmente em 2006 pela Rockstar Games, Bully é um clássico cult que
+            transporta os jogadores para
+            o conturbado ambiente da Bullworth Academy. No papel de Jimmy Hopkins, um adolescente rebelde, o jogador
+            enfrenta valentões, professores rígidos e desafios escolares em uma experiência única de mundo aberto. Com
+            uma mistura de humor, crítica social e jogabilidade envolvente, Bully conquistou fãs ao redor do mundo e até
+            hoje é lembrado como um dos jogos mais marcantes da sua geração.
+
+            Este site é uma homenagem à essa obra inesquecível — reunindo curiosidades, conteúdos da comunidade, guias e
+            tudo o que faz de Bully um jogo tão especial.</p>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-conteudo">
+            <div class="footer-coluna">
+                <h4>Sobre o site</h4>
+                <p>Este é um site guia para fãs de Bully</p>
+            </div>
+
+            <div class="footer-coluna">
+                <h4>Links úteis</h4>
+                <ul>
+                    <li><a href="#introducao">Inicio</a></li>
+                    <li><a href="#galeria">Galeria</a></li>
+                    <li><a href="#curiosidades">Curiosidades</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-coluna">
+                <h4>Redes sociais</h4>
+                <div class="footer-social">
+                    <a href="https://www.instagram.com/rockstargames/" target="_blank"><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="https://x.com/RockstarGames" target="_blank"><i class="fab fa-x-twitter"></i></a>
+                    <a href="https://www.youtube.com/@RockstarGames" target="_blank"><i class="fab fa-youtube"></i></a>
+                    <a href="https://discord.com/invite/rockstargames" target="_blank"><i
+                            class="fab fa-discord"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-copy">
+            <p>&copy; 2025 Site Guia Bully. Todos os direitos reservados.</p>
+            <p class="importante">Este site é um projeto pessoal de fã, sem fins lucrativos. Bully e todos os elementos
+                relacionados são propriedades da Rockstar Games. Este site não é afiliado à Rockstar Games.</p>
+        </div>
+    </footer>
+
+
+
+
+    <script>
+
+        /* menu Hamburguer */
+        const menuToggle = document.getElementById('menu-toggle');
+        const navegacao = document.querySelector('.navegacao');
+
+        menuToggle.addEventListener('click', () => {
+            navegacao.classList.toggle('ativa');
+        });
+
+
+        /* troca de imagens na home */
+        const slides = document.querySelectorAll('.img-slide');
+        const barra = document.getElementById('barra');
+        let index = 0;
+        const tempo = 6000;
+
+        function showSlide(i) {
+            slides.forEach((slide, idx) => {
+                slide.classList.remove('ativa');
+                if (idx === i) slide.classList.add('ativa');
+            });
+
+            barra.style.transition = 'none';
+            barra.style.width = '0%';
+
+            requestAnimationFrame(() => {
+                requestAnimationFrame(() => {
+                    barra.style.transition = `width ${tempo}ms linear`;
+                    barra.style.width = '100%';
+                });
+            });
+        }
+
+        function iniciarSlide() {
+            showSlide(index);
+            setInterval(() => {
+                index = (index + 1) % slides.length;
+                showSlide(index);
+            }, tempo);
+        }
+
+        iniciarSlide();
+
+
+        /* slides de curiosidades */
+        let indexCuriosidade = 0;
+        const curiosidades = document.querySelectorAll(".curiosidade-card");
+
+        function mostrarCuriosidade(n) {
+            curiosidades.forEach((curiosidade, i) => {
+                curiosidade.classList.remove("ativa");
+            });
+            curiosidades[n].classList.add("ativa");
+        }
+
+        function mudarCuriosidade(n) {
+            indexCuriosidade += n;
+            if (indexCuriosidade < 0) indexCuriosidade = curiosidades.length - 1;
+            if (indexCuriosidade >= curiosidades.length) indexCuriosidade = 0;
+            mostrarCuriosidade(indexCuriosidade);
+        }
+
+        mostrarCuriosidade(indexCuriosidade);
+
+
+        /*clique nas imagens da galeria e destivação do scrow ao clicar*/
+        const imagens = document.querySelectorAll('.img-galeria');
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+
+        imagens.forEach((img) => {
+            img.addEventListener('click', () => {
+                lightboxImg.src = img.src;
+                lightbox.style.display = 'flex';
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        lightbox.addEventListener('click', () => {
+            lightbox.style.display = 'none';
+            lightboxImg.src = '';
+            document.body.style.overflow = '';
+        });
+
+        /* JS que controla o modal na section "Missões" */
+        const missoes = {
+            'halloween': {
+                titulo: 'Halloween',
+                imagem: 'img/halloween.jpg',
+                descricao: 'É noite de Halloween em Bullworth! Participe das travessuras, vista sua fantasia e ajude os colegas com várias pegadinhas espalhadas pelo campus. Complete as tarefas assustadoras para receber recompensas e se divertir com o caos da noite mais bizarra do ano.'
+            },
+            'save-gary': {
+                titulo: 'Save Gary',
+                imagem: 'img/save-gary.jpg',
+                descricao: 'Uma das missões mais importantes da história, onde Jimmy descobre as verdadeiras intenções de Gary. Cheia de tensão, revelações e confronto final.'
+            },
+            'the-big-game': {
+                titulo: 'The Big Game',
+                imagem: 'img/the-big-game.jpg',
+                descricao: 'É o grande jogo da temporada! Ajude a sabotar os esportistas da escola antes que a partida comece. Plante armadilhas, espalhe confusão e garanta que Bullworth tenha uma “noite inesquecível” — ao estilo Jimmy Hopkins.'
+            }
+        };
+
+        function abrirModalMissao(nome) {
+            const modal = document.getElementById('modalMissao');
+            const dados = missoes[nome];
+
+            document.getElementById('modalImagem').src = dados.imagem;
+            document.getElementById('modalTitulo').textContent = dados.titulo;
+            document.getElementById('modalDescricao').textContent = dados.descricao;
+
+            modal.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function fecharModalMissao() {
+            const modal = document.getElementById('modalMissao');
+            modal.style.display = 'none';
+            document.body.style.overflow = '';
+        }
+
+    </script>
+
+
+</body>
+
+</html>

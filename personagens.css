@@ -1,0 +1,32 @@
+.bloco-titulo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.titulo-personagens {
+    font-family: var(--fonte-principal);
+    font-size: 44px;
+    font-weight: 800;
+    color: var(--amarelo);
+    text-align: center;
+    flex-wrap: wrap;
+    
+}
+
+.personagem-card {
+    margin-top: 2rem;
+}
+
+
+@media (max-width: 768px) {
+  .tela-inicial .brazao {
+    display: inline !important;
+  }
+
+  .titulo-personagens {
+    font-size: 30px;
+  }
+}
