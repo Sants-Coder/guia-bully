@@ -37,8 +37,8 @@ Tudo isso com um visual personalizado, responsivo, com modo claro/escuro e anima
 ## 📸 Screenshots
 
 <p float="left">
-  <img src="./img/apresentacao/apresentacao1.png" width="32%"/>
-  <img src="./img/apresentacao/apresentacao2.png" width="32%"/>
+  <img src="./img/apresentacao/apresentacao1.png"/>
+  <img src="./img/apresentacao/apresentacao2.png"/>
   <img src="./img/apresentacao/apresentacao3.png" width="32%"/>
 </p>
 
