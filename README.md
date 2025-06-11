@@ -19,14 +19,13 @@ O **Guia Bully** é um site interativo com foco em ajudar jogadores a:
 - Saber exatamente o que fazer para zerar Bully 100%,
 - E se localizar com o **mapa completo** do game.
 
-Tudo isso com um visual personalizado, responsivo, com modo claro/escuro e animações suaves, respeitando a estética original do jogo.
+Tudo isso com um visual personalizado, responsivo, com animações suaves, respeitando a estética original do jogo.
 
 ---
 
 ## ✨ Funcionalidades
 
-✔️ Interface responsiva e adaptada para mobile  
-✔️ Modo escuro e claro com transições suaves  
+✔️ Interface responsiva e adaptada para mobile   
 ✔️ Galeria de personagens com hover animado  
 ✔️ Lista completa e ilustrada para 100% do jogo  
 ✔️ Mapa de Bullworth Academy integrado  
@@ -54,7 +53,7 @@ Tudo isso com um visual personalizado, responsivo, com modo claro/escuro e anima
 ## 🚀 Deploy
 
 Você pode acessar o projeto online aqui:  
-🔗 [https://guia-bully.vercel.app](https://guia-bully.vercel.app) <!-- Substitua esse link após hospedar na Vercel -->
+🔗 [https://guia-bully.vercel.app](https://guia-bully.vercel.app/)
 
 ---
 
@@ -72,7 +71,7 @@ Você pode acessar o projeto online aqui:
 
 Desenvolvido por [Henrique Aguiar dos Santos](https://www.linkedin.com/in/henrique-aguiar-269b89233) 💻🌹  
 Se quiser me apoiar ou compartilhar, veja o post especial no LinkedIn:  
-👉 [Leia minha história com o projeto](https://www.linkedin.com/in/henrique-aguiar-269b89233) <!-- Atualize após postar -->
+👉 [Leia minha história com o projeto]()
 
 ---
 
