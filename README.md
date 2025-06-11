@@ -71,7 +71,7 @@ Você pode acessar o projeto online aqui:
 
 Desenvolvido por [Henrique Aguiar dos Santos](https://www.linkedin.com/in/henrique-aguiar-269b89233) 💻🌹  
 Se quiser me apoiar ou compartilhar, veja o post especial no LinkedIn:  
-👉 [Leia minha história com o projeto]()
+👉 [Leia minha história com o projeto](linkedin.com/in/henrique-aguiar-269b89233)
 
 ---
 
